@@ -1,19 +1,16 @@
-🍩 Project Description 🍩
-This is an interactive website for the Mobin Donut Tasting Party event, designed to highlight the shop's delicious donut offerings and showcase event details.
-Built using React, Tailwind CSS, and Model Viewer, this site provides an engaging user experience with interactive elements. Visitors can explore event details, RSVP for the tasting party, and discover Mobin Donut Shop's unique flavors.
+# 🍩 Mobin Donut Website 🍩
 
-📝 How to Run the Project 📝
-1/ Install dependencies.
-npm install
-2/ Start the development server.
-npm run dev
-3/ Open the local development URL.
+This is an interactive website for the **Mobin Donut Tasting Party** event, designed to highlight the shop's delicious donut offerings and showcase event details. Built using **React**, **Tailwind CSS**, and **Model Viewer**, this site provides an engaging user experience with interactive elements. Visitors can explore event details, RSVP for the tasting party, and discover Mobin Donut Shop's unique flavors.
 
-💡 Challenges 💡
-This program moves at a fast pace and covers a large amount of information in a short time. While this can be intense, it also fosters curiosity and encourages independent learning. I found that proactively exploring concepts on my own was key to fully understanding React and applying it effectively.
+## 🚀 Features
 
-I initially learned React through online tutorials, which provided a solid foundation and made it easier to follow along during lectures.
+- **Modern UI**: Sleek and intuitive user interface powered by React and Tailwind CSS.
+- **Interactive 3D Donut Viewer**: Explore donuts in 3D using Model Viewer.
+- **API Integration**: Fetch donut data from a live API hosted on Render.
+- **Dynamic Cart Logic**: Built a functional shopping cart allowing users to add/remove donuts to/from the cart, update quantities of items in the cart and view the total price in real-time.
 
-To build my understanding, I started with introductory React videos that covered essential topics such as file structure, components, imports/exports, JSX, props, key-value pairs, and state. Once I grasped the fundamentals, I moved on to full project tutorials, which helped me see how everything fits together in a real-world application.
+## 📝 How to Run the Project Locally
 
-This hands-on approach significantly strengthened my learning and gave me greater confidence in working with React.
+- **Install Dependencies**: npm install
+- **Start the Server**: npm run dev
+- **Start the JSON Server (API)**: npm run server
