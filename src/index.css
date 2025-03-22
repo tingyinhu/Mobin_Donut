@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Define Tailwind theme variables */
+@theme {
+  /* fonts */
+  --font-stevie-sans:  "stevie-sans", serif;
+  --font-beloved-script:  "beloved-script", serif;
+
+  /* colours */
+  --color-peru: #C98B45;
+  --color-burnt-sienna: #EC6852;
+  --color-beige: #F8F5DE;
+  --color-lotion: #FDFDFC;
+  --color-black: #3C3C3C;
+  --color-red: #FFCBC3;
+
+  /* Desktop Font Sizes */
+  --text-lg-h1: 36px;
+  --text-lg-h2: 28px;
+  --text-lg-h3: 24px;
+  --text-lg-h4: 20px;
+  --text-lg-p: 18px;
+
+  /* Laptop Font Sizes */
+  --text-md-h1: 2rem;
+  --text-md-h2: 1.75rem;
+  --text-md-h3: 1.5rem;
+  --text-md-h4: 1.25rem;
+  --text-md-p: 1rem;
+
+  /* Mobile Font Sizes */
+  --text-sm-h1: 32px;
+  --text-sm-h2: 28px;
+  --text-sm-h3: 24px;
+  --text-sm-h4: 20px;
+  --text-sm-p: 16px;
+
+}
