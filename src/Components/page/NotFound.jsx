@@ -1,3 +1,4 @@
+// src/pages/NotFound.jsx
 import { useNavigate } from "react-router-dom";
 import "@google/model-viewer";
 import Button from "../ui/Button";
@@ -10,9 +11,9 @@ const NotFound = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-10 px-5 mt-50 md:mt-35 md:px-8 bg-beige text-peru rounded-bl-2xl rounded-tr-2xl">
+    <div className="flex flex-col items-center justify-center py-10 m-50 bg-beige text-peru rounded-bl-2xl rounded-tr-2xl">
       {/* 3D Model */}
-      <div className="w-full md:w-8/12 lg:w-6/12 flex justify-center">
+      <div className="md:w-6/12 flex justify-center">
         <model-viewer
           src="/donut.glb"
           ar
@@ -24,18 +25,16 @@ const NotFound = () => {
           auto-rotate
           rotation-per-second="20deg"
           disable-zoom
-          className="w-full max-w-sm h-48 sm:h-64 md:h-80 lg:h-96"
+          className="w-[450px] max-w-sm h-64 md:h-96 block"
         />
       </div>
 
       {/* 404 */}
-      <h1 className="font-beloved-script text-4xl sm:text-5xl md:text-6xl font-bold my-5">
-        404
-      </h1>
-      <p className="font-beloved-script text-peru text-lg sm:text-xl md:text-2xl lg:text-3xl">
+      <h1 className="font-beloved-script text-5xl font-bold my-5">404</h1>
+      <p className="font-beloved-script text-peru text-sm-h2 md:text-md-h2 lg:text-lg-h2">
         Oops! We can't find that page.
       </p>
-      <p className="my-5 max-w-2xl text-sm sm:text-base md:text-lg font-light text-black text-center">
+      <p className="my-5 max-w-2xl text-sm-p md:text-md-p lg:text-lg-p font-light text-black">
         Sorry about that! Our team is on it, and we'll have it ready soon.
       </p>
 
@@ -44,7 +43,6 @@ const NotFound = () => {
         text="Return to Home"
         color="burnt-sienna"
         onClick={handleReturnHome}
-        className="mt-4 sm:mt-6"
       />
     </div>
   );
