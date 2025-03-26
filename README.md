@@ -6,7 +6,7 @@ This is an interactive website for the **Mobin Donut Tasting Party** event, desi
 
 - **Modern UI**: Sleek and intuitive user interface powered by React and Tailwind CSS.
 - **Interactive 3D Donut Viewer**: Explore donuts in 3D using Model Viewer.
-- **API Integration**: Fetch donut data from a live API hosted on Render.
+- **API Integration**: Fetch donut data from a mock API.
 - **Dynamic Cart Logic**: Built a functional shopping cart allowing users to add/remove donuts to/from the cart, update quantities of items in the cart and view the total price in real-time.
 
 ## 📝 How to Run the Project Locally

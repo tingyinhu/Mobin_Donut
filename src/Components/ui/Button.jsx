@@ -13,7 +13,7 @@ const Button = ({
 
   return (
     <button
-      className={`text-lotion py-3 px-8 rounded-full transition-all ${
+      className={`text-lotion py-4 px-8 rounded-full transition-all ${
         colorClasses[color] || colorClasses["burnt-sienna"]
       } ${hoverEffect ? "hover:brightness-110 cursor-pointer" : ""}`}
       onClick={onClick}
