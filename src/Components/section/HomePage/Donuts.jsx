@@ -11,7 +11,7 @@ const Donuts = ({ addToCart }) => {
 
   // Fetch donuts from the mock API
   useEffect(() => {
-    fetch("https://veil-amazing-eucalyptus.glitch.me/donuts")
+    fetch("http://localhost:3001/donuts")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data);
