@@ -42,9 +42,7 @@ const NotFound = () => {
       {/* Button */}
       <Button
         text="Return to Home"
-        color="burnt-sienna"
         onClick={handleReturnHome}
-        className="mt-4 sm:mt-6"
       />
     </div>
   );

@@ -119,7 +119,6 @@ const CheckoutContent = ({ cart }) => {
         <div className="flex justify-center mt-10">
           <Button
             text="Confirm Order"
-            color="burnt-sienna"
             onClick={handleConfirmOrder}
           />
         </div>

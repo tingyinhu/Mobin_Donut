@@ -104,7 +104,6 @@ const TastingParty = () => {
           <div className="flex justify-center mt-10">
           <Button
             text="RSVP Now"
-            color="burnt-sienna"
             onClick={fillRsvp}
           />
         </div>

@@ -3,15 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router-dom";
+import DonutModal from "../../ui/DonutModal";
 
 const Donuts = ({ addToCart }) => {
   const [donuts, setDonuts] = useState([]);
   const [likedDonuts, setLikedDonuts] = useState({});
+  const [selectedDonut, setSelectedDonut] = useState(null);
   const navigate = useNavigate();
 
   // Fetch donuts from the mock API
   useEffect(() => {
-    fetch("https://veil-amazing-eucalyptus.glitch.me/donuts")
+    fetch("http://localhost:3001/donuts")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data);
@@ -42,26 +44,45 @@ const Donuts = ({ addToCart }) => {
         Love it? Heart it, then grab it in your cart!
       </p>
 
+      {/* donut cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-        {donuts.map(({ id, name, price, description, image }) => (
-          <div key={id} className="rounded-l-2xl p-5 relative">
-            <img src={image} alt={name} className="w-full h-auto mb-15" />
+        {donuts.map((donut) => (
+          <div key={donut.id} className="rounded-l-2xl p-5 relative group">
+            {/* Image with View Details button */}
+            <div className="relative">
+              <img
+                src={donut.image}
+                alt={donut.name}
+                className="w-full h-auto mb-15 rounded-t-2xl"
+              />
+              {/* Btn */}
+              <div className="absolute bottom-8 right-0">
+                <Button
+                  text="View Details"
+                  onClick={() => setSelectedDonut(donut)}
+                  variant="secondary"
+                  color="burnt-sienna"
+                />
+              </div>
+            </div>
+
+            {/* Card info */}
             <div className="absolute bottom-0 left-0 w-full bg-beige text-peru p-4 rounded-bl-2xl rounded-tr-2xl">
               <div className="flex justify-between items-center">
                 <div>
                   <h4>
-                    {name}{" "}
+                    {donut.name}{" "}
                     <span className="mx-3 px-2 py-1 bg-peru text-lotion rounded-full">
-                      ${price}
+                      ${donut.price}
                     </span>
                   </h4>
-                  <p className="my-3">{description}</p>
+                  <p className="my-3">{donut.description}</p>
                 </div>
-                <button onClick={() => toggleLike(id)}>
+                <button onClick={() => toggleLike(donut.id)}>
                   <FontAwesomeIcon
                     icon={faHeart}
-                    className={`text-2xl mx-5 ${
-                      likedDonuts[id]
+                    className={`text-2xl ${
+                      likedDonuts[donut.id]
                         ? "text-burnt-sienna"
                         : "text-red fa-beat-fade cursor-pointer"
                     }`}
@@ -73,13 +94,16 @@ const Donuts = ({ addToCart }) => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-10">
-        <Button
-          text="Heart Your Favorites to Cart"
-          onClick={addLikedToCart}
-          color="burnt-sienna"
-          className="w-full max-w-md"
+      {/* Render modal */}
+      {selectedDonut && (
+        <DonutModal
+          donut={selectedDonut}
+          onClose={() => setSelectedDonut(null)}
         />
+      )}
+
+      <div className="flex justify-center mt-10">
+        <Button text="Heart Your Favorites to Cart" onClick={addLikedToCart} />
       </div>
     </section>
   );

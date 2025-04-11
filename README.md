@@ -14,3 +14,13 @@ This is an interactive website for the **Mobin Donut Tasting Party** event, desi
 - **Install Dependencies**: npm install
 - **Start the Server**: npm run dev
 - **Start the JSON Server (API)**: npm run server
+
+## 📝 Challenges and overcome
+
+One of the most interesting technical challenges was hosting the site while ensuring the mock API worked in a real environment:
+
+- **Problem**
+  This approach bypassed the hosting limitations (my provider, hostpapa🫠, didn’t support custom ports) while keeping the user experience smooth and fully functional.
+
+- **Solution**
+  I deployed the mock API on Glitch, creating a real, accessible online endpoint that enabled full data fetching without uploading everything to my own domain.
